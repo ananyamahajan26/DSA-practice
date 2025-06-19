@@ -1,0 +1,51 @@
+
+#include <iostream>
+using namespace std;
+//Printing Maximum Value
+int getMax(int num[],int n)
+{   
+    
+    int maxval= num[0];
+    
+    for (int i=0;i<n;i++)
+    {
+        if(num[i]>maxval)
+        {
+            maxval=num[i];
+        }
+    }
+    return maxval;
+}
+//Printing Minimum Value
+int getMin(int num[],int n)
+{
+    int min= num[0];
+    for (int i =0;i<n;i++)
+    {
+        if (num[i]<min)
+        {
+            min=num[i];
+            
+        }
+       
+    }
+     return min;
+}
+
+int main() {
+    int size;
+    
+    cout<<"enter Size ";
+    cin>>size;
+    int num [20];
+    for (int i =0;i<size;i++)
+    {
+        cin>>num[i];
+        cout<<num[i]<<endl;
+    }
+    cout<<"Maximum Value is "<<getMax(num,size)<<endl;
+    cout<<"Minimum Value is "<<getMin(num,size);
+    
+    
+    return 0;
+}
